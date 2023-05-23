@@ -33,8 +33,6 @@ export const Navbar = () => {
     }
 
 
-
-
     return (
         <>
             <nav className="bg-[url('../../assets/imgs/background-navbar.jpg')] bg-cover">
@@ -72,14 +70,14 @@ export const Navbar = () => {
                             :
                             pathname === REGISTER
                                 ?
-                                <div className=" flex items-center justify-between w-ful md:w-auto" id="navbar-authenticate">
+                                <div className=" flex items-center justify-between w-ful md:w-auto order-1" id="navbar-authenticate">
                                     <NavLink to={LOGIN} className='w-16 text-center'>
                                         <span className="text-white">Login</span>
                                     </NavLink>
                                 </div>
                                 :
 
-                                <div className=" flex items-center justify-between w-full md:w-auto" id="navbar-authenticate">
+                                <div className=" flex items-center justify-between w-full md:w-auto order-1" id="navbar-authenticate">
                                     <NavLink to={REGISTER} className='w-16 text-center'>
                                         <span className="text-white">Register</span>
                                     </NavLink>
