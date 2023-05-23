@@ -4,12 +4,17 @@ import { useLocation } from 'react-router-dom'
 import { useAuth } from "../../context/AuthContext"
 import { toast } from "react-hot-toast"
 
+
+
 export const Navbar = () => {
     const { authState, logout } = useAuth()
     const { isAuthenticated, user } = authState
     const { firstName } = user
     const location = useLocation()
     const { pathname } = location
+
+
+
 
     const handleLogout = () => {
         logout(null)
@@ -26,6 +31,9 @@ export const Navbar = () => {
             }
         )
     }
+
+
+
 
     return (
         <>
@@ -70,6 +78,7 @@ export const Navbar = () => {
                                     </NavLink>
                                 </div>
                                 :
+
                                 <div className=" flex items-center justify-between w-full md:w-auto" id="navbar-authenticate">
                                     <NavLink to={REGISTER} className='w-16 text-center'>
                                         <span className="text-white">Register</span>
@@ -77,6 +86,7 @@ export const Navbar = () => {
                                 </div>
                     }
                 </div>
+
             </nav >
         </>
 
