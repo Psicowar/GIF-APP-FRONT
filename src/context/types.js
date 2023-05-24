@@ -8,6 +8,7 @@ export const TYPES = {
 
     // Global reducer types
     SET_ALL_GIFS: "SET_ALL_GIFS",
+    SET_USER_GIFS: "SET_USER_GIFS"
 }
 
 

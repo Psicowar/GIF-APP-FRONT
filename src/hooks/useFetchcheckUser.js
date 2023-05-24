@@ -2,11 +2,7 @@ import axios from 'axios'
 
 export const useFetchcheckUser = () => {
     const checkUser = async (token, refresh) => {
-        axios.post(import.meta.env.VITE_BACKEND + "users/userData", {}, {
-            headers: {
-                "Authorization": token
-            }
-        })
+        axios.post(import.meta.env.VITE_BACKEND + "users/userData", {}, { headers: { "Authorization": token } })
             .then(res => {
                 const { data, status } = res
                 if (status === 200) {
