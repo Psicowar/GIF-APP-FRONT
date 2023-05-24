@@ -16,6 +16,9 @@ export default {
         'nav-texture': "url('./assets/imgs/background-navbar.jpg')"
       }
     },
+    fontFamily: {
+      erica: ["Righteous", "cursive"]
+    }
   },
   plugins: [
     require('flowbite/plugin')

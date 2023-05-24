@@ -1,41 +1,22 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer } from "react";
 import { TYPES } from "./types";
 import axios from "axios";
+import { useFetchAllGifs } from "../hooks/useFetchAllGifs";
+import { useFetchcheckUser } from "../hooks/useFetchcheckUser";
 
 
 const AuthContext = createContext();
 const token = localStorage.getItem('userToken') || undefined;
 
 export const useAuth = () => {
-
     return useContext(AuthContext);
 };
 
 export const AuthProvider = ({ children }) => {
+    const { checkUser } = useFetchcheckUser()
 
-    
     useEffect(() => {
-        const checkUser = async () => {
-            axios.post(import.meta.env.VITE_BACKEND + "users/userData", {}, {
-                headers: {
-                    "Authorization": token
-                }
-            })
-                .then(res => {
-                    const { data, status } = res
-                    if (status === 200) {
-                        refresh(
-                            {
-                                id: data.id,
-                                firstName: data.name,
-                                lastName: data.last_name,
-                                email: data.email,
-                            }, token
-                        );
-                    }
-                })
-        }
-        checkUser()
+        checkUser(token, refresh)
     }, [])
 
 

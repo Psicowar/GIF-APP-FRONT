@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom"
-import { HOME, LOGIN, REGISTER, SEARCH, UPLOAD } from "../../router/path"
+import { ALLGIFS, LOGIN, REGISTER, UPLOAD, USERGIFS } from "../../router/path"
 import { useLocation } from 'react-router-dom'
 import { useAuth } from "../../context/AuthContext"
-import { toast } from "react-hot-toast"
-
+import Swal from "sweetalert2"
 
 
 export const Navbar = () => {
@@ -14,50 +13,44 @@ export const Navbar = () => {
     const { pathname } = location
 
 
-
-
     const handleLogout = () => {
         logout(null)
-        toast.success("Logged out successfully",
-            {
-                style: {
-                    borderRadius: '10px',
-                    background: '#333',
-                    color: '#fff',
-                },
-                success: {
-                    duration: 2000
-                }
-            }
-        )
+        Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Logged out successfully',
+            showConfirmButton: false,
+            background: "#18181b",
+            timer: 1500
+        })
     }
-
 
     return (
         <>
-            <nav className="bg-[url('../../assets/imgs/background-navbar.jpg')] bg-cover">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <NavLink to={HOME} className="flex items-center">
-                        {/* <img src={gifterLogo} className="h-8 mr-3" alt="Gifter Logo" /> */}
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Gifter</span>
+            <nav className="bg-[url('../../assets/imgs/background-navbar.jpg')] bg-cover sticky top-0 z-10 overflow-hidden">
+                <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+                    <NavLink to={ALLGIFS} className="flex items-center">
+                        <span className="text-white text-2xl border-2 p-1 font-erica text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Gifter</span>
                     </NavLink>
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
                         <ul className="flex flex-row items-center justify-cebnter gap-10 text-white p-4 md:p-0 font-medium ">
                             <li>
-                                <NavLink to={HOME} className=" pr-4 text-white " aria-current="page">Home</NavLink>
+                                <NavLink to={ALLGIFS} className=" pr-4 text-white " aria-current="page">Home</NavLink>
                             </li>
                             {
                                 isAuthenticated
                                     ?
-                                    <li>
-                                        <NavLink to={UPLOAD} className=" pr-4 ">Upload</NavLink>
-                                    </li>
+                                    <>
+                                        <li>
+                                            <NavLink to={UPLOAD} className=" pr-4 ">Upload</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to={USERGIFS} className=" pr-4 ">My gifs</NavLink>
+                                        </li>
+                                    </>
                                     :
                                     ""
                             }
-                            <li>
-                                <NavLink to={SEARCH} className=" pr-4 ">Search</NavLink>
-                            </li>
                         </ul>
                     </div>
                     {

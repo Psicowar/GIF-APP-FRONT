@@ -14,7 +14,7 @@ export const Login = () => {
 
 
     return (
-        <div className="flex flex-row w-full h-[93vh]">
+        <div className="flex flex-row w-full min-h-[93.6vh] sticky top-0 z-10">
             <div className="w-full flex justify-center items-center">
                 <form className=" w-80" onSubmit={handleSubmit(submitLogin)}>
                     <div className="mb-6">
@@ -51,7 +51,7 @@ export const Login = () => {
                     <button type="submit" className="text-white w-full bg-red-600 rounded-md p-2">Login</button>
                 </form>
             </div>
-            <div className="bg-red-600 w-full  flex justify-center items-center">
+            <div className="w-full flex justify-center items-center bg-gradient-to-tl from-[#85FFBD] via-[#FFFB7D] via-50% to-white">
                 <h1 className="text-5xl">Gifter</h1>
             </div>
         </div>
