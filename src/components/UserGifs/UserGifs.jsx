@@ -10,6 +10,8 @@ import { BsTrashFill } from "react-icons/bs"
 import { MdModeEdit } from "react-icons/md"
 import { useFetchDeleteOne } from "../../hooks/useFetchDeleteOne"
 import { EditGifModal } from "./EditGifModal/EditGifModal"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export const UserGifs = () => {
   const { getGifs } = useFetchGetUserGifs()
@@ -65,7 +67,14 @@ export const UserGifs = () => {
                     return (
                       <div key={gif._id} className="flex flex-col items-center justify-center relative hover:bg-gradient-to-t hover:from-zinc-400 overflow-hidden hover:block">
                         <Link to={gif.giph} target="_blank">
-                          <img src={gif.preview_giph} alt={gif.title} className="w-80 h-80 object-cover hover:opacity-20 hover:scale-125 transition-all duration-500 cursor-pointer rounded-lg" />
+                          <LazyLoadImage
+                            alt={gif.title}
+                            src={gif.preview_giph}
+                            className='w-80 h-80 object-cover hover:opacity-20 hover:scale-125 transition-all duration-500 cursor-pointer'
+                            effect='blur'
+                            placeholderSrc={gif.preview_giph}
+                          />
+
                         </Link>
                         <span className="pl-3 text-white font-bold absolute bottom-10 w-72 left-0">{gif.title}</span>
                         <IoCopySharp className='hover:scale-110 z-100 absolute top-5 right-5 cursor-pointer' color='white' size={30} onClick={() => copyUrl(gif.giph)} />

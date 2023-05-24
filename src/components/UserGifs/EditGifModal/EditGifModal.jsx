@@ -1,8 +1,6 @@
 
 import { Modal } from 'flowbite-react'
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Puff } from 'react-loader-spinner';
 import { useFetchUpdateTitleGif } from '../../../hooks/useFetchUpdateTitleGif';
 
 
