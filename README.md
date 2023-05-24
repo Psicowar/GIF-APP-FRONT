@@ -1,1 +1,1 @@
-npx tailwindcss init -p
+# GIPH-APP-FRONT
