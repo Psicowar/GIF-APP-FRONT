@@ -1,10 +1,10 @@
 
 import { useEffect } from 'react'
 import { useGlobalContext } from '../../../context/GlobalContext'
-import { useFetchAllGifs } from '../../../hooks/useFetchAllGifs'
+import { useFetchAllGifs } from '../../../hooks/useFetchGetAllGifs'
 import { Link } from 'react-router-dom'
 import { IoCopySharp } from 'react-icons/io5'
-import { CopyToClipBoard } from '../CopyToClipBoard/CopyToClipBoard'
+import { CopyToClipBoard } from '../../CopyToClipBoard/CopyToClipBoard'
 
 export const DogsGifs = ({ queryParams }) => {
     const { gifsState } = useGlobalContext()

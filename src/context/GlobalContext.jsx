@@ -11,6 +11,7 @@ export const GlobalProvider = ({ children }) => {
 
     const initialState = {
         allGifs: [],
+        userGifs: [],
     }
 
     const reducer = (state, action) => {
@@ -18,6 +19,10 @@ export const GlobalProvider = ({ children }) => {
             case TYPES.SET_ALL_GIFS:
                 return {
                     allGifs: action.payload.allGifs
+                };
+            case TYPES.SET_USER_GIFS:
+                return {
+                    userGifs: action.payload.userGifs
                 };
             default:
                 return state;
@@ -28,6 +33,10 @@ export const GlobalProvider = ({ children }) => {
         dispatch({ type: TYPES.SET_ALL_GIFS, payload: { allGifs } })
     }, [])
 
+    const setUserGifs = useCallback((userGifs) => {
+        dispatch({ type: TYPES.SET_USER_GIFS, payload: { userGifs } })
+    }, [])
+
 
 
     const [gifsState, dispatch] = useReducer(reducer, initialState)
@@ -35,7 +44,8 @@ export const GlobalProvider = ({ children }) => {
     const data = useMemo(() => ({
         gifsState,
         setAllGifs,
-    }), [gifsState, setAllGifs])
+        setUserGifs
+    }), [gifsState, setAllGifs, setUserGifs])
 
     return <GlobalContext.Provider value={data}>{children}</GlobalContext.Provider>
 

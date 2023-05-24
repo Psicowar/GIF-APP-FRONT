@@ -1,7 +1,8 @@
+
 export * from './Categories/CarsGifs/CarsGifs';
-export * from './Categories/CopyToClipBoard/CopyToClipBoard';
 export * from './Categories/DogsGifs/DogsGifs';
 export * from './Categories/SportsGifs/SportsGifs';
+export * from './CopyToClipBoard/CopyToClipBoard';
 export * from './ErrorPage/ErrorPage';
 export * from './Home/Home';
 export * from './Login/Login';

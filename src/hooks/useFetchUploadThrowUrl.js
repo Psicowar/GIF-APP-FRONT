@@ -1,11 +1,13 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-import { v4 as uuidv4 } from 'uuid';
+import { useAuth } from "../context/AuthContext";
 
 export const useFetchUploadThrowUrl = () => {
+    const { authState } = useAuth();
+    const { user } = authState
     const onSubmitThrowUrl = async (data, setLoading, reset, setOpen) => {
         setLoading(true);
-        await axios.post(import.meta.env.VITE_BACKEND + "giphs/upload", { giph: data.url, title: data.title, id: uuidv4() })
+        await axios.post(import.meta.env.VITE_BACKEND + "giphs/upload", { giph: data.url, title: data.title, id: user.id })
             .then(({ status }) => {
 
                 if (status === 200) {

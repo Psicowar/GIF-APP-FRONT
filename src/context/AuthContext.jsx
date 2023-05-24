@@ -1,7 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer } from "react";
 import { TYPES } from "./types";
-import axios from "axios";
-import { useFetchAllGifs } from "../hooks/useFetchAllGifs";
 import { useFetchcheckUser } from "../hooks/useFetchcheckUser";
 
 

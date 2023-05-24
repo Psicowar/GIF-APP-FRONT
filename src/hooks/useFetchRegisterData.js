@@ -5,11 +5,10 @@ import { LOGIN } from "../router/path";
 
 export const useFetchRegisterData = () => {
     const navigate = useNavigate()
-
+    
     const sendUserData = (data) => {
         axios.post(import.meta.env.VITE_BACKEND + 'users/register', { data })
             .then(({ status }) => {
-
                 if (status === 201) {
                     navigate(LOGIN)
                     toast.success("Registered Successfully!", {

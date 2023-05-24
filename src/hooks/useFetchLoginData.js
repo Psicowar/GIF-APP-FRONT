@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 export const useFetchLoginData = () => {
     const navigate = useNavigate()
     const { login } = useAuth();
-    
+
     const sendUserData = (data) => {
 
         axios.post(import.meta.env.VITE_BACKEND + 'users/authenticate', { data })

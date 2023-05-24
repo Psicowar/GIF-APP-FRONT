@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useGlobalContext } from '../../../context/GlobalContext'
-import { useFetchAllGifs } from '../../../hooks/useFetchAllGifs'
+import { useFetchAllGifs } from '../../../hooks/useFetchGetAllGifs'
 import { Link } from 'react-router-dom'
-import { CopyToClipBoard } from '../CopyToClipBoard/CopyToClipBoard'
+import { CopyToClipBoard } from '../../CopyToClipBoard/CopyToClipBoard'
 import { IoCopySharp } from 'react-icons/io5'
 
 export const CarsGifs = ({ queryParams }) => {

@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { useFetchAllGifs } from "../../../hooks/useFetchAllGifs"
+import { useFetchAllGifs } from "../../../hooks/useFetchGetAllGifs"
 import { useGlobalContext } from '../../../context/GlobalContext'
 import { Link } from 'react-router-dom'
 import { IoCopySharp } from 'react-icons/io5';
-import { CopyToClipBoard } from '../CopyToClipBoard/CopyToClipBoard';
+import { CopyToClipBoard } from '../../CopyToClipBoard/CopyToClipBoard';
 
 
 export const AllGifs = ({ queryParams }) => {
@@ -21,7 +21,7 @@ export const AllGifs = ({ queryParams }) => {
     return (
         <div className="grid grid-cols-4 gap-3">
             {
-                allGifs.filter(({ title }) => {
+                allGifs?.filter(({ title }) => {
                     if (!queryParams) return true
                     else if (queryParams.length < 3) return true
                     else return title.toLowerCase().includes(queryParams.toLowerCase())
