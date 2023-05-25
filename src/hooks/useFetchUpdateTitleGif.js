@@ -7,7 +7,6 @@ export const useFetchUpdateTitleGif = () => {
     const { getGifs } = useFetchGetUserGifs()
 
     const onSubmitTitleGif = (gifTitle, reset, id, setOpen) => {
-        console.log(id);
         axios.patch(import.meta.env.VITE_BACKEND + "giphs/updateTitleUserGif", { gifTitle, id })
             .then(({ status }) => {
                 if (status === 200) {
