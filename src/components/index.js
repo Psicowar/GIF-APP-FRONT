@@ -1,4 +1,4 @@
-
+export * from './Categories/AllGifs/AllGifs';
 export * from './Categories/CarsGifs/CarsGifs';
 export * from './Categories/DogsGifs/DogsGifs';
 export * from './Categories/SportsGifs/SportsGifs';
@@ -11,4 +11,5 @@ export * from './Register/Register';
 export * from './Upload/ModalUploadThrowPc/ModalUploadThrowPc';
 export * from './Upload/ModalUploadThrowUrl/ModalUploadThrowUrl';
 export * from './Upload/Upload';
+export * from './UserGifs/EditGifModal/EditGifModal';
 export * from './UserGifs/UserGifs';

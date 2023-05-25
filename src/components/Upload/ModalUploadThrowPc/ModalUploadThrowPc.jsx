@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { BsCloudUpload } from 'react-icons/bs';
 import { Puff } from 'react-loader-spinner';
-import { useFetchUploadThrowPc } from '../../../hooks/useFetchUploadThrowPc';
+import { useFetchUploadThrowPc } from '../../../hooks/index';
 
 
 export const ModalUploadThrowPc = ({ open, setOpen }) => {

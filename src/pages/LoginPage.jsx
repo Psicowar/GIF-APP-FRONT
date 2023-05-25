@@ -1,7 +1,7 @@
-import * as components from '../components/index'
+import { Login } from '../components/index'
 
 export const LoginPage = () => {
     return (
-        <components.Login />
+        <Login />
     )
 }

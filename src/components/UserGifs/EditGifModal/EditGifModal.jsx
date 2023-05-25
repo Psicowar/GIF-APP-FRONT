@@ -1,7 +1,7 @@
 
 import { Modal } from 'flowbite-react'
 import { useForm } from 'react-hook-form';
-import { useFetchUpdateTitleGif } from '../../../hooks/useFetchUpdateTitleGif';
+import { useFetchUpdateTitleGif } from '../../../hooks/index';
 
 
 export const EditGifModal = ({ title, open, setOpen, img, id }) => {

@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ALLGIFS, CARSGIFS, DOGSGIFS, HOME, LOGIN, REGISTER, SPORTSGIFS, UPLOAD, USERGIFS } from './path'
-import * as pages from '../pages/index'
-import { Navbar } from '../components/Navbar/Navbar'
-import { ErrorPage } from '../components/ErrorPage/ErrorPage'
+import { AllGifsPage, HomePage, LoginPage, RegisterPage, UploadPage, UserGifsPage } from '../pages/index'
+import { ErrorPage, Navbar } from '../components/index'
 import { PrivateRoute } from './PivateRoute/PrivateRoute'
 
 
@@ -13,24 +12,24 @@ export const MyRouter = () => {
         <Router>
             <Navbar />
             <Routes>
-                <Route path={HOME} element={<pages.HomePage />} >
-                    <Route path={ALLGIFS} element={<pages.AllGifsPage />} />
-                    <Route path={SPORTSGIFS} element={<pages.HomePage />} />
-                    <Route path={CARSGIFS} element={<pages.HomePage />} />
-                    <Route path={DOGSGIFS} element={<pages.HomePage />} />
+                <Route path={HOME} element={<HomePage />} >
+                    <Route path={ALLGIFS} element={<AllGifsPage />} />
+                    <Route path={SPORTSGIFS} element={<HomePage />} />
+                    <Route path={CARSGIFS} element={<HomePage />} />
+                    <Route path={DOGSGIFS} element={<HomePage />} />
                 </Route>
-                <Route path={LOGIN} element={<pages.LoginPage />} />
-                <Route path={REGISTER} element={<pages.RegisterPage />} />
+                <Route path={LOGIN} element={<LoginPage />} />
+                <Route path={REGISTER} element={<RegisterPage />} />
 
                 <Route path={UPLOAD} element={
                     <PrivateRoute>
-                        <pages.UploadPage />
+                        <UploadPage />
                     </PrivateRoute>
                 } />
 
                 <Route path={USERGIFS} element={
                     <PrivateRoute>
-                        <pages.UserGifsPage />
+                        <UserGifsPage />
                     </PrivateRoute>
                 } />
 

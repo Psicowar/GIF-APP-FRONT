@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { useFetchAllGifs } from "../../../hooks/useFetchGetAllGifs"
+import { useFetchAllGifs } from "../../../hooks/index"
 import { useGlobalContext } from '../../../context/GlobalContext'
 import { Link } from 'react-router-dom'
 import { IoCopySharp } from 'react-icons/io5';
-import { CopyToClipBoard } from '../../CopyToClipBoard/CopyToClipBoard';
+import { CopyToClipBoard } from '../../index';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 

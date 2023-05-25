@@ -1,9 +1,7 @@
 import { NavLink, useLocation, useSearchParams } from "react-router-dom"
 import { ALLGIFS, SPORTSGIFS, CARSGIFS, DOGSGIFS } from "../../router/path";
-import { AllGifs } from "../Categories/AllGifs/Allgifs";
-import { SportsGifs } from "../Categories/SportsGifs/SportsGifs";
-import { CarsGifs } from "../Categories/CarsGifs/CarsGifs"
-import { DogsGifs } from "../Categories/DogsGifs/DogsGifs"
+import { AllGifs, CarsGifs, DogsGifs, SportsGifs} from "../index"
+
 
 
 

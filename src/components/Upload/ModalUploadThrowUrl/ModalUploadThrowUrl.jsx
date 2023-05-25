@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { BsCloudUpload } from 'react-icons/bs'
 import { Puff } from 'react-loader-spinner';
-import { useFetchUploadThrowUrl } from '../../../hooks/useFetchUploadThrowUrl';
+import { useFetchUploadThrowUrl } from '../../../hooks/index';
 
 export const ModalUploadThrowUrl = ({ open, setOpen }) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();

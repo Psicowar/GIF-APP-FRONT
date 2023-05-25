@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react"
-import { useFetchGetUserGifs } from "../../hooks/useFetchGetUserGifs"
+import { useFetchGetUserGifs, useFetchDeleteAllGifs, useFetchDeleteOne } from "../../hooks/index"
+import { CopyToClipBoard, EditGifModal } from "../index"
 import { useGlobalContext } from "../../context/GlobalContext"
 import { Link, NavLink } from "react-router-dom"
 import { IoCopySharp } from "react-icons/io5"
-import { CopyToClipBoard } from "../CopyToClipBoard/CopyToClipBoard"
 import { UPLOAD } from "../../router/path"
-import { useFetchDeleteAllGifs } from "../../hooks/useFetchDeleteAll"
 import { BsTrashFill } from "react-icons/bs"
 import { MdModeEdit } from "react-icons/md"
-import { useFetchDeleteOne } from "../../hooks/useFetchDeleteOne"
-import { EditGifModal } from "./EditGifModal/EditGifModal"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 

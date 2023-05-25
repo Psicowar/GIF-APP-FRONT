@@ -1,9 +1,7 @@
-import * as components from '../components/index'
+import { UserGifs } from '../components/index'
 
-const UserGifsPage = () => {
+export const UserGifsPage = () => {
     return (
-        <components.UserGifs />
+        <UserGifs />
     )
 }
-
-export default UserGifsPage

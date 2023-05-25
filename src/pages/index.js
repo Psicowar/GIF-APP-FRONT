@@ -3,4 +3,4 @@ export * from './HomePage';
 export * from './LoginPage';
 export * from './RegisterPage';
 export * from './UploadPage';
-export { default as UserGifsPage } from './UserGifsPage';
+export * from './UserGifsPage';

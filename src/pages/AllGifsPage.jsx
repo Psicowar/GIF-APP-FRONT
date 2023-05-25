@@ -1,4 +1,4 @@
-import { AllGifs } from "../components/Categories/AllGifs/Allgifs"
+import { AllGifs } from "../components/index"
 
 export const AllGifsPage = () => {
     return (

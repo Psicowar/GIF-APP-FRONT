@@ -1,6 +1,5 @@
-import { ModalUploadThrowPc } from "./ModalUploadThrowPc/ModalUploadThrowPc"
+import { ModalUploadThrowPc, ModalUploadThrowUrl } from "../index"
 import { useState } from "react"
-import { ModalUploadThrowUrl } from "./ModalUploadThrowUrl/ModalUploadThrowUrl"
 
 
 export const Upload = () => {
