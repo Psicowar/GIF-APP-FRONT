@@ -52,7 +52,7 @@ export const UserGifs = () => {
         <div className="flex gap-20 p-10 w-full justify-center h-32 items-center">
           {
             userGifs?.length > 0 &&
-            <button className="bg-red-500 p-2 rounded-md" onClick={deleteAllGifs}>
+            <button className="bg-[#E96479] p-2 rounded-md text-[#E6DDC4] hover:border-2 hover:border-[#E6DDC4]" onClick={deleteAllGifs}>
               Delete all
             </button>
           }
@@ -66,18 +66,18 @@ export const UserGifs = () => {
                   userGifs.map((gif) => {
                     return (
                       <div key={gif._id} className="flex flex-col items-center justify-center relative overflow-hidden hover:block">
-                            <Link to={gif.giph} target="_blank">
-                                <LazyLoadImage
-                                    alt={gif.title}
-                                    src={gif.preview_giph}
-                                    className='w-80 h-80 rounded-lg object-cover hover:scale-95 hover:rounded-lg hover:border-4 border-[#E6DDC4] cursor-pointer'
-                                    effect='blur'
-                                    placeholderSrc={gif.preview_giph}
-                                />
+                        <Link to={gif.giph} target="_blank">
+                          <LazyLoadImage
+                            alt={gif.title}
+                            src={gif.preview_giph}
+                            className='w-80 h-80 rounded-lg object-cover hover:scale-95 hover:rounded-lg hover:border-4 border-[#E6DDC4] cursor-pointer'
+                            effect='blur'
+                            placeholderSrc={gif.preview_giph}
+                          />
 
-                            </Link>
-                            <span className="pl-5 font-bold absolute bottom-10 w-72 left-0 text-[#E6DDC4]">{gif.title}</span>
-                            <IoCopySharp className='hover:scale-110 z-100 absolute top-5 right-5 cursor-pointer' color='#E6DDC4' size={30} onClick={() => copyUrl(gif.giph)} />
+                        </Link>
+                        <span className="pl-5 font-bold absolute bottom-10 w-72 left-0 text-[#E6DDC4]">{gif.title}</span>
+                        <IoCopySharp className='hover:scale-110 z-100 absolute top-5 right-5 cursor-pointer' color='#E6DDC4' size={30} onClick={() => copyUrl(gif.giph)} />
                         <BsTrashFill className='hover:scale-110 z-100 absolute top-5 right-16 cursor-pointer' color='#E6DDC4' size={30} onClick={() => deleteGif(gif._id)} />
                         <MdModeEdit className='hover:scale-110 z-100 absolute top-5 right-28 cursor-pointer' color='#E6DDC4' size={30} onClick={() => handleOpenModal(gif.title, gif.preview_giph, gif._id)} />
                       </div>
