@@ -68,9 +68,7 @@ export const AuthProvider = ({ children }) => {
         );
 
         useEffect(() => {
-            if (authState.isAuthenticated) {
                 checkUser(token, refresh)
-            }
         }, [])
         
 

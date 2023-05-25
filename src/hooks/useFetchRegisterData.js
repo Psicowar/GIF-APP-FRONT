@@ -12,7 +12,7 @@ export const useFetchRegisterData = () => {
                 if (status === 201) {
                     navigate(LOGIN)
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'Registered Successfully!',
                         showConfirmButton: false,
@@ -23,7 +23,7 @@ export const useFetchRegisterData = () => {
                 }
                 else if (status === 204) {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'User already exists!',
                         showConfirmButton: false,
@@ -34,7 +34,7 @@ export const useFetchRegisterData = () => {
                 }
                 else {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'Something went wrong!',
                         showConfirmButton: false,

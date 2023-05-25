@@ -21,7 +21,7 @@ export const useFetchUploadThrowPc = () => {
                         .then(({ status }) => {
                             if (status === 200) {
                                 Swal.fire({
-                                    position: 'top-center',
+                                    position: 'center',
                                     icon: 'success',
                                     title: 'Uploaded successfully',
                                     showConfirmButton: false,
@@ -35,7 +35,7 @@ export const useFetchUploadThrowPc = () => {
                         })
                 } else {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'error',
                         title: 'Something went wrong',
                         showConfirmButton: false,

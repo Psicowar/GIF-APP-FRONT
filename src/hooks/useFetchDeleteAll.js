@@ -24,7 +24,7 @@ export const useFetchDeleteAllGifs = () => {
                     .then(({ status }) => {
                         if (status === 200) {
                             Swal.fire({
-                                position: 'top-center',
+                                position: 'center',
                                 icon: 'success',
                                 title: 'All gifs deleted successfully',
                                 showConfirmButton: false,
@@ -34,7 +34,7 @@ export const useFetchDeleteAllGifs = () => {
                             setUserGifs([])
                         } else {
                             Swal.fire({
-                                position: 'top-center',
+                                position: 'center',
                                 icon: 'error',
                                 title: 'Something get wron',
                                 showConfirmButton: false,

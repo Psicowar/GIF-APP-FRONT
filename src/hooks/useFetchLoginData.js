@@ -23,7 +23,7 @@ export const useFetchLoginData = () => {
                         }, token
                     );
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'Successfully logged in',
                         showConfirmButton: false,
@@ -36,7 +36,7 @@ export const useFetchLoginData = () => {
             }).catch((err) => {
                 if (err.response.status === 401) {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'error',
                         title: 'Incorrect login details',
                         showConfirmButton: false,
@@ -45,7 +45,7 @@ export const useFetchLoginData = () => {
                     })
                 } else {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'error',
                         title: 'Something went wrong',
                         showConfirmButton: false,

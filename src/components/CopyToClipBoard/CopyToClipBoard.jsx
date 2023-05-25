@@ -4,7 +4,7 @@ export const CopyToClipBoard = () => {
     const copyUrl = (url) => {
         navigator.clipboard.writeText(url)
         Swal.fire({
-            position: 'top-center',
+            position: 'center',
             icon: 'success',
             title: 'Url copied to clipboard!',
             showConfirmButton: false,

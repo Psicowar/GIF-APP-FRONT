@@ -12,7 +12,7 @@ export const useFetchUploadThrowUrl = () => {
 
                 if (status === 200) {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'Uploaded successfully',
                         showConfirmButton: false,

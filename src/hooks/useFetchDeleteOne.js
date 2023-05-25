@@ -13,7 +13,7 @@ export const useFetchDeleteOne = () => {
                 if (status === 200) {
                     getGifs()
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'deleted successfully',
                         showConfirmButton: false,
@@ -22,7 +22,7 @@ export const useFetchDeleteOne = () => {
                     })
                 } else {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'error',
                         title: 'Something get wron',
                         showConfirmButton: false,

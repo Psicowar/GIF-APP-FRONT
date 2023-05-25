@@ -16,7 +16,7 @@ export const Navbar = () => {
     const handleLogout = () => {
         logout(null)
         Swal.fire({
-            position: 'top-center',
+            position: 'center',
             icon: 'success',
             title: 'Logged out successfully',
             showConfirmButton: false,

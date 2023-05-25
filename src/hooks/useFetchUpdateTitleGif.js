@@ -14,7 +14,7 @@ export const useFetchUpdateTitleGif = () => {
                     reset()
                     setOpen(false)
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'deleted successfully',
                         showConfirmButton: false,
@@ -23,7 +23,7 @@ export const useFetchUpdateTitleGif = () => {
                     })
                 } else {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'error',
                         title: 'Something get wron',
                         showConfirmButton: false,
