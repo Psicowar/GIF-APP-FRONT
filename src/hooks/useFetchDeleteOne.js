@@ -17,7 +17,7 @@ export const useFetchDeleteOne = () => {
                         icon: 'success',
                         title: 'deleted successfully',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 } else {
@@ -26,7 +26,7 @@ export const useFetchDeleteOne = () => {
                         icon: 'error',
                         title: 'Something get wron',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 }

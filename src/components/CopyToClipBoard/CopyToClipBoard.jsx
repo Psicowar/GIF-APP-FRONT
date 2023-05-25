@@ -8,7 +8,7 @@ export const CopyToClipBoard = () => {
             icon: 'success',
             title: 'Url copied to clipboard!',
             showConfirmButton: false,
-            background: "#18181b",
+            background: "#1b1e2a",
             timer: 1500
         })
     }

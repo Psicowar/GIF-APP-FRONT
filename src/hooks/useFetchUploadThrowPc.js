@@ -25,7 +25,7 @@ export const useFetchUploadThrowPc = () => {
                                     icon: 'success',
                                     title: 'Uploaded successfully',
                                     showConfirmButton: false,
-                                    background: "#18181b",
+                                    background: "#1b1e2a",
                                     timer: 1500
                                 })
                                 reset()
@@ -39,7 +39,7 @@ export const useFetchUploadThrowPc = () => {
                         icon: 'error',
                         title: 'Something went wrong',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 }

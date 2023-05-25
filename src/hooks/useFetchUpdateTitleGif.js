@@ -19,7 +19,7 @@ export const useFetchUpdateTitleGif = () => {
                         icon: 'success',
                         title: 'deleted successfully',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 } else {
@@ -28,7 +28,7 @@ export const useFetchUpdateTitleGif = () => {
                         icon: 'error',
                         title: 'Something get wron',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 }

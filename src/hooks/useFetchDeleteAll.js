@@ -14,7 +14,7 @@ export const useFetchDeleteAllGifs = () => {
             icon: 'warning',
             iconColor: '#ef5567',
             showCancelButton: true,
-            background: "#18181b",
+            background: "#1b1e2a",
             confirmButtonColor: '#ef5567',
             cancelButtonColor: '#ef5567',
             confirmButtonText: 'Yes, delete all!'
@@ -28,7 +28,7 @@ export const useFetchDeleteAllGifs = () => {
                                 icon: 'success',
                                 title: 'All gifs deleted successfully',
                                 showConfirmButton: false,
-                                background: "#18181b",
+                                background: "#1b1e2a",
                                 timer: 1500
                             })
                             setUserGifs([])
@@ -38,7 +38,7 @@ export const useFetchDeleteAllGifs = () => {
                                 icon: 'error',
                                 title: 'Something get wron',
                                 showConfirmButton: false,
-                                background: "#18181b",
+                                background: "#1b1e2a",
                                 timer: 1500
                             })
                         }

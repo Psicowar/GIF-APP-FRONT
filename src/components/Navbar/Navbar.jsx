@@ -20,32 +20,32 @@ export const Navbar = () => {
             icon: 'success',
             title: 'Logged out successfully',
             showConfirmButton: false,
-            background: "#18181b",
+            background: "#1b1e2a",
             timer: 1500
         })
     }
 
     return (
         <>
-            <nav className="bg-[url('../../assets/imgs/background-navbar.jpg')] bg-cover sticky top-0 z-10 overflow-hidden">
+            <nav className="bg-[#1b1e2a] shadow-2xl bg-cover sticky top-0 z-10 overflow-hidden">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-4">
                     <NavLink to={ALLGIFS} className="flex items-center">
-                        <span className="text-white text-2xl border-2 p-1 font-erica text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Gifter</span>
+                        <span className="text-[#E6DDC4] text-2xl border-2 border-[#E6DDC4] p-1 font-erica rounded-lg">Gifter</span>
                     </NavLink>
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
                         <ul className="flex flex-row items-center justify-cebnter gap-10 text-white p-4 md:p-0 font-medium ">
                             <li>
-                                <NavLink to={ALLGIFS} className=" pr-4 text-white " aria-current="page">Home</NavLink>
+                                <NavLink to={ALLGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-md transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")} aria-current="page">Home</NavLink>
                             </li>
                             {
                                 isAuthenticated
                                     ?
                                     <>
                                         <li>
-                                            <NavLink to={UPLOAD} className=" pr-4 ">Upload</NavLink>
+                                            <NavLink to={UPLOAD} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-md transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>Upload</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to={USERGIFS} className=" pr-4 ">My gifs</NavLink>
+                                            <NavLink to={USERGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-md transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>My gifs</NavLink>
                                         </li>
                                     </>
                                     :
@@ -57,25 +57,25 @@ export const Navbar = () => {
                         isAuthenticated
                             ?
                             <div className="flex items-center justify-between w-full md:w-auto order-1" id="navbar-authenticate">
-                                <span className="text-white mr-3">Hello {firstName}!</span>
-                                <button className="text-white bg-red-500 rounded-lg p-2" onClick={handleLogout}>Logout</button>
+                                <span className="text-[#E6DDC4] mr-3">Hello {firstName}!</span>
+                                <button className="border-2 border-[#E6DDC4] text-[#E6DDC4] rounded-lg p-2" onClick={handleLogout}>Logout</button>
                             </div>
                             :
                             pathname === REGISTER
                                 ?
-                                <div className=" flex items-center justify-between w-ful md:w-auto order-1" id="navbar-authenticate">
-                                    <NavLink to={LOGIN} className='w-16 text-center'>
-                                        <span className="text-white">Login</span>
+                                <div className=" flex items-center justify-between w-ful md:w-auto order-1 border-2 border-[#E6DDC4] rounded-lg">
+                                    <NavLink to={LOGIN} className='w-16 h-10 text-center flex items-center justify-center '>
+                                        <span className="text-[#E6DDC4]">Login</span>
                                     </NavLink>
-                                </div>
+                                </div>      
                                 :
-
-                                <div className=" flex items-center justify-between w-full md:w-auto order-1" id="navbar-authenticate">
-                                    <NavLink to={REGISTER} className='w-16 text-center'>
-                                        <span className="text-white">Register</span>
+                                <div className=" flex items-center justify-between w-full md:w-auto order-1 border-2 border-[#E6DDC4] rounded-lg">
+                                    <NavLink to={REGISTER} className='w-20 h-10 text-center flex items-center justify-center'>
+                                        <span className="text-[#E6DDC4]">Register</span>
                                     </NavLink>
                                 </div>
                     }
+
                 </div>
 
             </nav >

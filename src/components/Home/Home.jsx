@@ -14,34 +14,34 @@ export const Home = () => {
     const { pathname } = location
 
     const queryParams = searchParams.get('q') ?? "";
-    
+
     const handleInputData = ({ target }) => {
         setSearchParams({ q: target.value })
     }
 
 
     return (
-        <div className="bg-slate-900 min-h-[100vh] pb-20">
+        <div className="bg-[#181D31] min-h-[100vh] pb-20">
             <div className="flex gap-20 p-10 w-full justify-center h-32 items-center">
-                <NavLink to={ALLGIFS} className={({ isActive }) => (isActive ? "bg-slate-600 rounded-lg w-32 h-11 scale-105 shadow-blue-800 border-2 border-blue-600 shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-slate-600 rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-blue-700 ")}>
+                <NavLink to={ALLGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>
                     ALL
                 </NavLink>
-                <NavLink to={SPORTSGIFS} className={({ isActive }) => (isActive ? "bg-slate-600 rounded-lg w-32 h-11 scale-105 shadow-blue-800 border-2 border-blue-600 shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-slate-600 rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-blue-700")}>
+                <NavLink to={SPORTSGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>
                     SPORTS
                 </NavLink>
-                <NavLink to={CARSGIFS} className={({ isActive }) => (isActive ? "bg-slate-600 rounded-lg w-32 h-11 scale-105 shadow-blue-800 border-2 border-blue-600 shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-slate-600 rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-blue-700")}>
+                <NavLink to={CARSGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>
                     CARS
                 </NavLink>
-                <NavLink to={DOGSGIFS} className={({ isActive }) => (isActive ? "bg-slate-600 rounded-lg w-32 h-11 scale-105 shadow-blue-800 border-2 border-blue-600 shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-slate-600 rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-blue-700")}>
+                <NavLink to={DOGSGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>
                     DOGS
                 </NavLink>
-        
+
             </div>
             <div className="flex w-full justify-center pb-10">
                 <input
                     type="text"
                     id="search"
-                    className="border-0 focus:border-t-transparent focus:ring-0 rounded-lg w-96 bg-slate-600 placeholder-black"
+                    className="border-0 focus:border-t-transparent focus:ring-[#E6DDC4] w-96 rounded-md bg-[#1b1e2a] placeholder-[#E6DDC4] text-[#E6DDC4]"
                     placeholder="Search..."
                     value={queryParams}
                     onChange={handleInputData}

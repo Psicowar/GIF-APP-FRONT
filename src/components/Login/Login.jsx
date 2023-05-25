@@ -14,26 +14,26 @@ export const Login = () => {
 
 
     return (
-        <div className="flex flex-row w-full min-h-[93.6vh] sticky top-0 z-10">
+        <div className="flex flex-row w-full min-h-[93.6vh] sticky top-0 z-10 bg-[#181D31] ">
             <div className="w-full flex justify-center items-center">
                 <form className=" w-80" onSubmit={handleSubmit(submitLogin)}>
                     <div className="mb-6">
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-[#E6DDC4]">Your email</label>
                         <input
                             type="email"
                             id="email"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            className="bg-slate-600 border-0 focus:border-t-transparent focus:ring-[#E6DDC4] rounded-md text-[#E6DDC4] text-sm rounde block w-full p-2.5 placeholder-[#E6DDC4]"
                             placeholder="example@example.com"
                             {...register("email", { required: true })}
                         />
                         {errors.name?.type === "required" && <p className="text-red-500 text-xs text-center pt-1">The email is required.</p>}
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+                        <label htmlFor="password" className="block mb-2 text-sm font-medium text-[#E6DDC4]">Your password</label>
                         <input
                             type="password"
                             id="password"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            className="bg-slate-600 border-0 focus:border-t-transparent focus:ring-[#E6DDC4] rounded-md text-[#E6DDC4] text-sm rounde block w-full p-2.5 placeholder-[#E6DDC4]"
                             required
                             placeholder="*******"
                             {...register("password", { required: true, })}
@@ -41,18 +41,19 @@ export const Login = () => {
                         {errors.password?.type === "required" && <p className="text-red-500 text-xs text-center pt-1">The password is required. </p>}
                     </div>
                     <div className="flex items-start mb-6">
-                        <span className="text-sm ">
+                        <span className="text-sm text-[#E6DDC4] ">
                             Dont have an account?
                         </span>
-                        <NavLink to={REGISTER} className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 hover:text-blu hover:underline'>
+                        <NavLink to={REGISTER} className='ml-2 text-sm font-medium text-[#e6ce8c] dark:text-gray-300 hover:text-blu hover:underline'>
                             Register
                         </NavLink>
                     </div>
-                    <button type="submit" className="text-white w-full bg-red-600 rounded-md p-2">Login</button>
+                    <button type="submit" className="text-white w-full flex justify-center items-center h-10 bg-[#E96479] hover:border-2 hover:border-[#E6DDC4] rounded-md">Login</button>
                 </form>
             </div>
-            <div className="w-full flex justify-center items-center bg-gradient-to-tl from-[#85FFBD] via-[#FFFB7D] via-50% to-white">
-                <h1 className="text-5xl">Gifter</h1>
+            <div className="w-full flex flex-col justify-center items-center bg-[#E96479] gap-5">
+                <span className="text-4xl font-erica text-[#E6DDC4]">WELCOME TO:</span>
+                <span className="text-5xl font-erica text-[#E6DDC4]">Gifter.</span>
             </div>
         </div>
     )

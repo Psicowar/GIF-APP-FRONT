@@ -23,11 +23,11 @@ export const useFetchLoginData = () => {
                         }, token
                     );
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'top-center',
                         icon: 'success',
                         title: 'Successfully logged in',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                     localStorage.setItem("userToken", token)
@@ -36,20 +36,20 @@ export const useFetchLoginData = () => {
             }).catch((err) => {
                 if (err.response.status === 401) {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'top-center',
                         icon: 'error',
                         title: 'Incorrect login details',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
                 } else {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'top-center',
                         icon: 'error',
                         title: 'Something went wrong',
                         showConfirmButton: false,
-                        background: "#18181b",
+                        background: "#1b1e2a",
                         timer: 1500
                     })
 
