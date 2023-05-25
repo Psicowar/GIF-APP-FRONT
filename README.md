@@ -1,4 +1,4 @@
-# GIPH-APP-FRONT
+# GIF-APP-FRONT
 
 
 ### MEDIA
