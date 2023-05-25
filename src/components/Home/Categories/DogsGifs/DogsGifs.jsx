@@ -1,18 +1,19 @@
+
 import { useEffect } from 'react'
-import { useGlobalContext } from '../../../context/GlobalContext'
-import { useFetchAllGifs } from '../../../hooks/index'
+import { useGlobalContext } from '../../../../context/GlobalContext'
+import { useFetchAllGifs } from '../../../../hooks/index';
+import { CopyToClipBoard } from '../../../index';
 import { Link } from 'react-router-dom'
-import { CopyToClipBoard } from '../../index'
 import { IoCopySharp } from 'react-icons/io5'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-export const CarsGifs = ({ queryParams }) => {
+export const DogsGifs = ({ queryParams }) => {
     const { gifsState } = useGlobalContext()
     const { allGifs } = gifsState
     const { getAllGifs } = useFetchAllGifs()
     const { copyUrl } = CopyToClipBoard()
-    const carsGifs = allGifs.filter(({ title }) => { return title.toLowerCase().includes('car') })
+    const dogsGifs = allGifs.filter(({ title }) => { return title.toLowerCase().includes('dog') })
 
     useEffect(() => {
         getAllGifs();
@@ -22,7 +23,7 @@ export const CarsGifs = ({ queryParams }) => {
     return (
         <div className="grid grid-cols-4 gap-3">
             {
-                carsGifs.filter(({ title }) => {
+                dogsGifs.filter(({ title }) => {
                     if (!queryParams) return true
                     else if (queryParams.length < 3) return true
                     else return title.toLowerCase().includes(queryParams.toLowerCase())

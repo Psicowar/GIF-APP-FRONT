@@ -1,32 +1,32 @@
-import { useEffect } from 'react';
-import { useGlobalContext } from '../../../context/GlobalContext'
-import { useFetchAllGifs } from '../../../hooks/index';
-import { CopyToClipBoard } from '../../index';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react'
+import { useGlobalContext } from '../../../../context/GlobalContext'
+import { useFetchAllGifs } from '../../../../hooks/index';
+import { CopyToClipBoard } from '../../../index';
+import { Link } from 'react-router-dom'
 import { IoCopySharp } from 'react-icons/io5';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-export const SportsGifs = ({ queryParams }) => {
+
+export const AllGifs = ({ queryParams }) => {
     const { gifsState } = useGlobalContext()
     const { allGifs } = gifsState
     const { getAllGifs } = useFetchAllGifs()
     const { copyUrl } = CopyToClipBoard()
-    const sportsGifs = allGifs.filter(({ title }) => { return title.toLowerCase().includes('sport') })
 
     useEffect(() => {
         getAllGifs();
     }, [])
 
 
+
     return (
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-4 gap-4">
             {
-                sportsGifs.filter(({ title }) => {
+                allGifs?.filter(({ title }) => {
                     if (!queryParams) return true
                     else if (queryParams.length < 3) return true
                     else return title.toLowerCase().includes(queryParams.toLowerCase())
-
                 }).map((gif, i) => {
                     return (
                         <div key={i} className="flex flex-col items-center justify-center relative overflow-hidden hover:block">

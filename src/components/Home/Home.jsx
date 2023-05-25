@@ -33,7 +33,6 @@ export const Home = () => {
                 <NavLink to={DOGSGIFS} className={({ isActive }) => (isActive ? "bg-[#1b1e2a] rounded-lg w-32 h-11 scale-105 shadow-[#E6DDC4] border-2 border-[#E6DDC4] text-[#E6DDC4] shadow-lg transition-all ease-in-out duration-200 text-center flex items-center justify-center" : "h-9 bg-[#1b1e2a] rounded-lg w-32 flex items-center justify-center hover:border-2 hover:border-[#E6DDC4] text-[#E6DDC4]")}>
                     DOGS
                 </NavLink>
-
             </div>
             <div className="flex w-full justify-center pb-10">
                 <input
