@@ -13,11 +13,8 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
     const { checkUser } = useFetchcheckUser()
 
-    useEffect(() => {
-        checkUser(token, refresh)
-    }, [])
-
-
+    
+    
     const initialState = {
         isAuthenticated: false,
         user: {
@@ -29,7 +26,7 @@ export const AuthProvider = ({ children }) => {
         token: "",
         error: "",
     };
-
+    
     const reducer = (state, action) => {
         switch (action.type) {
             case TYPES.LOGIN_SUCCESS:
@@ -68,7 +65,14 @@ export const AuthProvider = ({ children }) => {
     const [authState, dispatch] = useReducer(
         reducer,
         initialState
-    );
+        );
+
+        useEffect(() => {
+            if (authState.isAuthenticated) {
+                checkUser(token, refresh)
+            }
+        }, [])
+        
 
     const login = useCallback((user, token, error) => {
         if (!error) {
